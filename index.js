@@ -20,9 +20,9 @@ const instagram = 'Instagram kamu';
 const aktif = 'Kapan bot aktif';
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:Nama kamu\n' // Nama kamu
-            + 'ORG:Nama bot;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=6280000000000:+62 000-0000-0000\n' //Nomor whatsapp kamu
+            + 'FN:Nama RibasYT\n' // Nama kamu
+            + 'ORG:Nama RibasBot;\n' // Nama bot
+            + 'TEL;type=CELL;type=VOICE;waid=6282193030283:+62 821-9303-0283\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 const
 {
@@ -78,7 +78,7 @@ conn.on('user-presence-update', json => console.log(json.id + ' presence is => '
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by ig:@mrf.zvx`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by ig:@rbs.420`)
 })
 
 conn.on('message-new', async(m) =>
@@ -889,7 +889,7 @@ axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${sons}`).then (
     (ress) => {
     var buf = Buffer.from(ress, 'base64')
     conn.sendMessage(id, '[ WAIT ] Stalking⏳ silahkan tunggu', MessageType.text, { quoted: m } )
-    let hasil = `*>Username* : ${res.data.Username}\n*>Nama* : ${res.data.Name}\n*>Follower* : ${res.data.Jumlah_Followers}\n*>Following* : ${res.data.Jumlah_Following}\n*>Jumlah Post* : ${res.data.Jumlah_Post}\n*>Bio* : ${res.data.Biodata}\n\nFollow : https://www.instagram.com/mrf.zvx/`;
+    let hasil = `*>Username* : ${res.data.Username}\n*>Nama* : ${res.data.Name}\n*>Follower* : ${res.data.Jumlah_Followers}\n*>Following* : ${res.data.Jumlah_Following}\n*>Jumlah Post* : ${res.data.Jumlah_Post}\n*>Bio* : ${res.data.Biodata}\n\nFollow : https://www.instagram.com/rbs.420/`;
     conn.sendMessage(id, buf ,MessageType.image, { caption: hasil, quoted: m } );
     })
 })
@@ -1409,6 +1409,6 @@ Silakan pilih :
 }
 
 //Hay gay
-//create @mrf.zvx don't delate this please
+//create @RibasYT don't delate this please
 	
 })
